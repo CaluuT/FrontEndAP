@@ -1,0 +1,55 @@
+.row{
+    padding: 15px;
+    margin: 0;
+}
+
+.container{
+    min-width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+div{
+    background-color: #3b83bd;
+    text-align: center;
+}
+
+/* Estilo fotoPerfil*/
+@media (min-width: 576px){
+    #fotoPerfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        left: 3%;
+        top: 510px;
+    }
+}
+@media (max-width: 575px){
+    #fotoPerfil{
+        position: absolute;
+        width: 20%;
+        border-radius: 100%;
+        left: 39%;
+        top: 250px;
+    }
+}
+/**/
+
+/* Fuentes aplicadas */
+p{
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1{
+    font-family: 'Comfortaa';
+}
+/**/
+
+/* Estilo del nombre */
+#nombre{
+    font-weight: bold;
+    margin-top: 20%;
+}
+/**/
