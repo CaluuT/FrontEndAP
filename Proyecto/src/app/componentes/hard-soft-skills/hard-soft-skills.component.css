@@ -1,0 +1,15 @@
+.row{
+    padding: 15px;
+    margin: 0;
+    background-color: #3b83bd;
+}
+
+div{
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1{
+    text-align: left;
+    font-family: 'Comfortaa';
+}

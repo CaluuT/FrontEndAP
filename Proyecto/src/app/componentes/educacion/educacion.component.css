@@ -1,0 +1,17 @@
+.row{
+    padding: 15px;
+    margin: 0;
+}
+
+div{
+    background-color: #3b83bd;
+}
+
+h1, h3{
+    display: inline;
+    font-family: 'Comfortaa';
+}
+
+p{
+    font-family: 'Roboto Mono', monospace;
+}
