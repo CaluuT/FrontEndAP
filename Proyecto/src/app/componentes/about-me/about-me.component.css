@@ -16,16 +16,17 @@ div{
     text-align: center;
 }
 
-/* Estilo fotoPerfil*/
+/* Estilo fotoPerfil, Se redondea el marco de la imagen y se desplaza entre el banner y el body del lado izquierdo. Aplicado para pantallas mayores a 576px de ancho*/
 @media (min-width: 576px){
     #fotoPerfil{
-        position: absolute;
-        width: 15%;
+        width: 100%;
         border-radius: 100%;
         left: 3%;
-        top: 510px;
     }
 }
+/**/
+
+/*Para pantallas menores a 575px, se desplaza hacia el medio de la página*/
 @media (max-width: 575px){
     #fotoPerfil{
         position: absolute;

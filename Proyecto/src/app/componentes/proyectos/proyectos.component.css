@@ -1,0 +1,33 @@
+.row{
+    padding: 15px;
+    margin: 0px;
+    background-color: #3b83bd;
+}
+
+.contenedor{
+    width: auto;
+}
+
+.descripcion, .imagen{
+    display: inline-block;
+    text-align: justify;
+}
+
+.imagen{
+    padding: 15px;
+}
+
+h1, h3{
+    display: inline;
+    font-family: 'Comfortaa';
+}
+
+p{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.imagen-proyecto{
+    box-shadow: 10px 10px 20px black;
+    border-radius: 15px;
+    border: 2px solid white;
+}
