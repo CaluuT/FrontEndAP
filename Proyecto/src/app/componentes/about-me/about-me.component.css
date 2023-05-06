@@ -1,6 +1,6 @@
 .row{
     padding: 15px;
-    margin: 0;
+    margin: 0px;
 }
 
 .container{
@@ -33,7 +33,7 @@ div{
         width: 20%;
         border-radius: 100%;
         left: 39%;
-        top: 250px;
+        top: 275px;
     }
 }
 /**/
