@@ -1,0 +1,10 @@
+.row{
+    background: linear-gradient(#3b83bd, #15045a);
+    margin: 0px;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
