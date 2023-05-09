@@ -27,7 +27,7 @@ p{
 }
 
 .imagen-proyecto{
-    box-shadow: 10px 10px 20px black;
+    box-shadow: 10px 10px 15px #15045a;
     border-radius: 15px;
     border: 2px solid white;
 }
