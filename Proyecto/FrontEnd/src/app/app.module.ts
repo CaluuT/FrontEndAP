@@ -16,6 +16,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component'
+import { FormsModule } from '@angular/forms';
+import { ProveedorInterceptor } from './service/servicio-interceptor';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,12 @@ import { LoginComponent } from './componentes/login/login.component'
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    ProveedorInterceptor
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

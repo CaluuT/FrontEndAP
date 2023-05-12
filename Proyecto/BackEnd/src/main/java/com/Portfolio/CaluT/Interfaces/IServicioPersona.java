@@ -4,6 +4,7 @@ import com.Portfolio.CaluT.Entidades.Persona;
 import java.util.List;
 
 public interface IServicioPersona {
+    
    public List<Persona> getPersona();
            
     
