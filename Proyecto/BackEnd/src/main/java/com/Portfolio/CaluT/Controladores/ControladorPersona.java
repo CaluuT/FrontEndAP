@@ -4,7 +4,6 @@ import com.Portfolio.CaluT.Entidades.Persona;
 import com.Portfolio.CaluT.Interfaces.IServicioPersona;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +24,7 @@ public class ControladorPersona {
         return iservicioPersona.getPersona();
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
      iservicioPersona.savePersona(persona);
