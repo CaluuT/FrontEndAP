@@ -1,15 +1,21 @@
 <div class="row">
     <h1>Hard & Soft Skills</h1>
-    <div class="col-sm-4 col-md-4 col-lg-4">
+
+    <div class="col-lg-1">
+        <button type="button" routerLink="/nuevaskill" class="btn btn-dark" *ngIf="isLogged">Agregar Skills</button>
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let skills of skills">
         <circle-progress
-            [percent]="75"
+            [percent]="(skills.porcentaje)"
             [radius]="100"
             [outerStrokeWidth]="10"
             [innerStrokeWidth]="5"
-            [imageSrc]="'../assets/logos/angular-logo.png'"
+            [imageSrc]="''"
+            [title]="(skills.nombre)"
             [imageHeight]="150"
             [imageWidth]="150"
-            [showImage]="true"
+            [showImage]="false"
             [showUnits]="false"
             [showSubtitle]="false"
             [outerStrokeColor]="'#78C000'"
@@ -17,95 +23,12 @@
             [animation]="true"
             [animationDuration]="1000"
         ></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="80"
-            [radius]="100"
-            [outerStrokeWidth]="10"
-            [innerStrokeWidth]="5"
-            [imageSrc]="'../assets/logos/sql-logo.png'"
-            [imageHeight]="100"
-            [imageWidth]="100"
-            [showImage]="true"
-            [showUnits]="false"
-            [showSubtitle]="false"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="1000"
-        ></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="75"
-            [radius]="100"
-            [outerStrokeWidth]="10"
-            [innerStrokeWidth]="5"
-            [imageSrc]="'../assets/logos/java-logo.png'"
-            [imageHeight]="125"
-            [imageWidth]="150"
-            [showImage]="true"
-            [showUnits]="false"
-            [showSubtitle]="false"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="1000"
-        ></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [outerStrokeWidth]="10"
-            [innerStrokeWidth]="5"
-            [title]="'Trabajo en Equipo'"
-            [titleColor]="'black'"
-            [titleFontSize]="'16'"
-            [titleFontWeight]="'bold'"
-            [showUnits]="false"
-            [showSubtitle]="false"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="1000"
-        ></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [outerStrokeWidth]="10"
-            [innerStrokeWidth]="5"
-            [title]="'Responsabilidad'"
-            [titleColor]="'black'"
-            [titleFontSize]="'16'"
-            [titleFontWeight]="'bold'"
-            [showUnits]="false"
-            [showSubtitle]="false"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="1000"
-        ></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [outerStrokeWidth]="10"
-            [innerStrokeWidth]="5"
-            [title]="'Adaptabilidad'"
-            [titleColor]="'black'"
-            [titleFontSize]="'16'"
-            [titleFontWeight]="'bold'"
-            [showUnits]="false"
-            [showSubtitle]="false"
-            [outerStrokeColor]="'#78C000'"
-            [innerStrokeColor]="'#C7E596'"
-            [animation]="true"
-            [animationDuration]="1000"
-        ></circle-progress>
+
+        <td *ngIf="isLogged">
+            <button class="btn btn-dark" routerLink="/editskill/{{skills.id}}"><i class="bi bi-pencil-square"></i>Editar</button>
+        </td>
+        <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="delete(skills.id)"><i class="bi bi-trash"></i>Borrar</button>
+        </td>
     </div>
 </div>
