@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    URL: 'https://calutbackend.onrender.com/'
+    URL: 'https://backend-wprq.onrender.com/'
 };
