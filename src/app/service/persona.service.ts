@@ -8,21 +8,21 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = environment.URL +'personas/';
+  perURL = environment.URL +'personas/';
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<persona[]>{
-    return this.httpClient.get<persona[]> (this.URL + 'lista');
+    return this.httpClient.get<persona[]> (this.perURL + 'lista');
   }
 
   public detail(id: number): Observable<persona>{
-    return this.httpClient.get<persona>(this.URL + `detail/${id}`);
+    return this.httpClient.get<persona>(this.perURL + `detail/${id}`);
 
   }
 
   public update(id: number, Persona: persona): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, Persona);
+    return this.httpClient.put<any>(this.perURL + `update/${id}`, Persona);
   }
 
 }

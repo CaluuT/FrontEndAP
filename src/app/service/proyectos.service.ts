@@ -9,28 +9,28 @@ import { Observable } from 'rxjs';
 })
 export class ProyectosService {
 
-  URL = environment.URL + 'proyectos/'; 
+  proURL = environment.URL + 'proyectos/'; 
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Proyectos[]>{
-    return this.httpClient.get<Proyectos[]> (this.URL + 'lista');
+    return this.httpClient.get<Proyectos[]> (this.proURL + 'lista');
   }
 
   public detail(id: number): Observable<Proyectos>{
-    return this.httpClient.get<Proyectos>(this.URL + `detail/${id}`);
+    return this.httpClient.get<Proyectos>(this.proURL + `detail/${id}`);
 
   }
 
   public save(proyectos: Proyectos): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', proyectos);
+    return this.httpClient.post<any>(this.proURL + 'create', proyectos);
   }
 
   public update(id: number, proyectos: Proyectos): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, proyectos);
+    return this.httpClient.put<any>(this.proURL + `update/${id}`, proyectos);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.proURL + `delete/${id}`);
   }
 }

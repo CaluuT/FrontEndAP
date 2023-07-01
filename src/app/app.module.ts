@@ -26,7 +26,7 @@ import { EditSkillsComponent } from './componentes/hard-soft-skills/edit-skills.
 import { NewSkillsComponent } from './componentes/hard-soft-skills/new-skills.component';
 import { EditaboutMeComponent } from './componentes/about-me/editabout-me.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.development';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NewProyectosComponent } from './componentes/proyectos/new-proyectos.component';
 import { EditProyectosComponent } from './componentes/proyectos/edit-proyectos.component';
